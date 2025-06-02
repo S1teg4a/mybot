@@ -3,16 +3,16 @@
 apt update && apt upgrade -y
 ```
 ```
-git clone https://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@github.com/SenxXtraz/mybot
+git clone https://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@github.com/jerzzoffc/rico-owner
 ```
 ```
-cd mybot && screen -S mybot
+cd rico-owner && screen -S rico-owner
 ```
 ```
 bash installnode.sh && apt install python3.10-venv
 ```
 ```
-python3 -m venv mybot && source mybot/bin/activate
+python3 -m venv rico-owner && source rico-owner/bin/activate
 ```
 ```
 pip3 install -r requirements.txt
