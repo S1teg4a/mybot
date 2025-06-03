@@ -181,7 +181,7 @@ async def help_callback(client, callback_query):
     tutup_match = re.match(r"help_tutup\((.+?)\)", callback_query.data)
     back_match = re.match(r"help_back", callback_query.data)
     SH = await ubot.get_prefix(callback_query.from_user.id)
-    top_text = f"<blockquote><b>✮ ᴍᴇɴᴜ ɪɴʟɪɴᴇ <a href=tg://user?id={callback_query.from_user.id}>{callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}</a>\n ≛ ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}\n 卍 ᴘʀᴇꜰɪx: {' '.join(SH)}\n ✰ ᴜʙᴏᴛ ʙʏ: <a href=https://t.me/userbotKipop_bott>𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙺𝙸𝙿𝙾𝙿</a></b></blockquote>"
+    top_text = f"<blockquote><b>✮ ᴍᴇɴᴜ ɪɴʟɪɴᴇ <a href=tg://user?id={callback_query.from_user.id}>{callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}</a>\n ≛ ᴛᴏᴛᴀʟ ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}\n 卍 ᴘʀᴇꜰɪx: {' '.join(SH)}\n ✰ ᴜʙᴏᴛ ʙʏ: <a href=https://t.me/gaasubot>𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝚂𝙸𝚃𝙴𝙶𝙰𝙰</a></b></blockquote>"
 
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
@@ -189,7 +189,7 @@ async def help_callback(client, callback_query):
         button = [[InlineKeyboardButton("✭ʙᴀᴄᴋ✭", callback_data="help_back")]]
         await callback_query.edit_message_text(
             text=text 
-            + '\n<blockquote><b>USERBOT PREM 3K/BULAN BY @userbotKipop_bot</a> </b></blockquote>',
+            + '\n<blockquote><b>USERBOT PREM 3K/BULAN BY @gaasubot</a> </b></blockquote>',
             reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )
