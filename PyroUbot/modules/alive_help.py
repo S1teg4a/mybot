@@ -67,7 +67,7 @@ async def _(client, inline_query):
         peer_users: {users} users
         peer_group: {group} group
         start_uptime: {uptime}</blockquote>
-        <blockquote><b>USERBOT  PREM 3K/BULAN BY @userbotKipop_bot</b></blockquote>
+        <blockquote><b>USERBOT  PREM 3K/BULAN BY @gaasubot</b></blockquote>
 """
             await client.answer_inline_query(
                 inline_query.id,
