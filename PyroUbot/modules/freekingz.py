@@ -22,7 +22,7 @@ from PyroUbot import *
 @PY.PRIVATE
 async def _(client, message):
     buttons = BTN.PROMODEK(message)
-    sh = await message.reply("""<u><b>𝗙𝗜𝗧𝗨𝗥 𝗙𝗥𝗘𝗘 𝗗𝗘𝗪𝗔 𝗨𝗦𝗘𝗥𝗕𝗢𝗧!</b></u>
+    sh = await message.reply("""<u><b>𝗙𝗜𝗧𝗨𝗥 𝗙𝗥𝗘𝗘 SITEGAA 𝗨𝗦𝗘𝗥𝗕𝗢𝗧!</b></u>
 <blockquote><b>/ai -  ᴘᴇʀᴛᴀɴʏᴀᴀɴ ᴍᴜ</b>
 <b>/joko - ᴊᴏᴋᴏ ᴀɪ ʏᴀɪᴛᴜ ᴀɪ ʏᴀɴɢ ʙᴇʀʙᴀʜᴀsᴀ ᴊᴀᴡᴀ</b>
 <b>/brat - ᴍᴀsᴜᴋᴋᴀɴ ᴛᴇxᴛ ᴜɴᴛᴜᴋ ᴅɪ ᴊᴀᴅɪᴋᴀɴ ғᴏᴛᴏ</b>
@@ -32,4 +32,4 @@ async def _(client, message):
 <b>/tiktok - ʙᴇʀɪᴋᴀɴ ʟɪɴᴋ ᴠᴛ/ʟɪɴᴋ ғɪᴅɪᴏ ᴛɪᴋᴛᴏᴋ ᴜɴᴛᴜᴋ ᴅɪ ᴅᴏᴡɴʟᴏᴀᴅ</b></blockquote>
 
 <blockquote><b>ᴏᴡɴᴇʀ ᴜsᴇʀʙᴏᴛ ᴅɪ ʙᴀᴡᴀʜ sɪɴɪʜ</b>
-<b>ᴏᴡɴᴇʀ ᴜsᴇʀʙᴏᴛ: <a href=https://t.me/GanzVil21>ᴏᴡɴᴇʀ ᴅᴇᴡᴀ</a></b></blockquote>""", reply_markup=InlineKeyboardMarkup(buttons))
+<b>ᴏᴡɴᴇʀ ᴜsᴇʀʙᴏᴛ: <a href=https://t.me/sitegaax5>OWNER SITEGAA</a></b></blockquote>""", reply_markup=InlineKeyboardMarkup(buttons))
