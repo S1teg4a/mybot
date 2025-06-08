@@ -323,7 +323,7 @@ async def _(client, callback_query):
         await new_client.join_chat("SpUbotSTGA")
         await new_client.join_chat("sitegaame")
         await new_client.join_chat("publiksitegaax5")
-        await new_client.join_chat("testimonisitegaa")
+        await new_client.join_chat("testisitegaax5")
     except UserAlreadyParticipant:
         pass
 
