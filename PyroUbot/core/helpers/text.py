@@ -17,7 +17,7 @@ class MSG:
 <b>halo 👋🏻  <a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}</a></b>❕
 <blockquote><b>📚 {bot.me.mention} adalah bot multi client yang dapat membuat userbot dengan sangat mudah.</b>
 
-<b>✨ bot ini di kembangkan oleh: @sitegaax5, bot ini di rancang untuk memudahkan pengguna telegram untuk mengirim pesan group&user telegram dengan instant, dan memiliki banyak fitur yang berguna lainnya.</b></blockquote>
+<b>✨ bot ini di kembangkan oleh: @Sitegaax, bot ini di rancang untuk memudahkan pengguna telegram untuk mengirim pesan group&user telegram dengan instant, dan memiliki banyak fitur yang berguna lainnya.</b></blockquote>
 <b>👉 silahkan pilih salah satu tombol di bawah ini❗</b>
 <b>- jika ada kendala silahkan hubungi pengembang.</b>"""
 
