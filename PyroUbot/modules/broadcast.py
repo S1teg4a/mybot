@@ -250,7 +250,7 @@ async def _(client, message):
         except Exception:
             pass
 
-    return await msg.edit(f"<blockquote><b>Pesan broadcast berhasil terkirim ke {done} user</blockquote></b>\n\n<blockquote><b>`USERBOT 5K/BULAN BY` @myuserbotzgnz_Bot</b></blockquote>")
+    return await msg.edit(f"<blockquote><b>Pesan broadcast berhasil terkirim ke {done} user</blockquote></b>\n\n<blockquote><b>`USERBOT 3K/BULAN BY` @Sitegaax</b></blockquote>")
 
 
 @PY.UBOT("addbl")
@@ -272,14 +272,14 @@ async def _(client, message):
 <blockquote><b>{grp} ɢʀᴏᴜᴘ: {message.chat.title}</blockquote></b>
 <blockquote><b>{ktrn} ᴋᴇᴛ: sᴜᴅᴀʜ ᴀᴅᴀ ᴅᴀʟᴀᴍ ʟɪsᴛ</blockquote></b>
 
-<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax5</b></blockquote>
+<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax</b></blockquote>
 """
         else:
             await add_to_vars(client.me.id, "BL_ID", chat_id)
             txt = f"""
 <blockquote><b>{grp} ɢʀᴏᴜᴘ: {message.chat.title}</blockquote></b>\n<blockquote><b>{ktrn} ᴋᴇᴛ: ʙᴇʀʜᴀsɪʟ ᴅɪ ᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ᴅᴀʟᴀᴍ ʟɪsᴛ</blockquote></b>
 
-<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax5</b></blockquote>
+<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax</b></blockquote>
 """
 
         return await msg.edit(txt)
@@ -306,7 +306,7 @@ async def _(client, message):
 <blockquote><b>{grp} ɢʀᴏᴜᴘ: {message.chat.title}</blockquote></b>
 <blockquote><b>{ktrn} ᴋᴇᴛ: ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴅᴀʟᴀᴍ ʟɪsᴛ</b></blockquote>
 
-<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax5</b></blockquote>
+<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax</b></blockquote>
 """
         else:
             await remove_from_vars(client.me.id, "BL_ID", chat_id)
@@ -314,7 +314,7 @@ async def _(client, message):
 <blockquote><b>{grp} ɢʀᴏᴜᴘ: {message.chat.title}</blockquote ></b>
 <blockquote><b>{ktrn} ᴋᴇᴛ: ʙᴇʀʜᴀsɪʟ ᴅɪ ʜᴀᴘᴜs ᴋᴇ ᴅᴀʟᴀᴍ ʟɪsᴛ</blockquote></b>
 
-<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax5</b></blockquote>
+<blockquote><b>USERBOT 3K/BULAN BY @Sitegaax</b></blockquote>
 """
 
         return await msg.edit(response)
