@@ -254,7 +254,7 @@ async def _(client, message):
     Tm = await message.reply("processing . . .")
     bajingan = message.command
     if len(bajingan) != 3:
-        return await Tm.edit(f"gunakan /set_time user_id hari")
+        return await Tm.edit(f"gunakan /time user_id hari")
     user_id = int(bajingan[1])
     get_day = int(bajingan[2])
     print(user_id , get_day)
