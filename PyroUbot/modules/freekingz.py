@@ -32,4 +32,4 @@ async def _(client, message):
 <b>/tiktok - ʙᴇʀɪᴋᴀɴ ʟɪɴᴋ ᴠᴛ/ʟɪɴᴋ ғɪᴅɪᴏ ᴛɪᴋᴛᴏᴋ ᴜɴᴛᴜᴋ ᴅɪ ᴅᴏᴡɴʟᴏᴀᴅ</b></blockquote>
 
 <blockquote><b>ᴏᴡɴᴇʀ ᴜsᴇʀʙᴏᴛ ᴅɪ ʙᴀᴡᴀʜ sɪɴɪʜ</b>
-<b>ᴏᴡɴᴇʀ ᴜsᴇʀʙᴏᴛ: <a href=https://t.me/sitegaax5>OWNER SITEGAA</a></b></blockquote>""", reply_markup=InlineKeyboardMarkup(buttons))
+<b>ᴏᴡɴᴇʀ ᴜsᴇʀʙᴏᴛ: <a href=https://t.me/sitegaax>OWNER SITEGAA</a></b></blockquote>""", reply_markup=InlineKeyboardMarkup(buttons))
