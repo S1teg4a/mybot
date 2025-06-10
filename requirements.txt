@@ -13,6 +13,7 @@ bs4
 Pillow==9.5.0
 pymediainfo
 requests
+speedtest-cli
 unidecode
 filetype
 attrify
