@@ -33,7 +33,7 @@ for button:
 payment | dana - dana | | bank - bank # | 
 catatan : untuk membuat button menyamping adalah #
 
-contoh menggunakan callback/tombol : <a href='https://t.me/TESTIPRIBADIBOYSZ/1605'>tutorial</a></blockquote>
+contoh menggunakan callback/tombol : <a href='https://t.me/marketplacemee/13'>KLIK DISINI TUTORNYA</a></blockquote>
 """
 
 
@@ -211,4 +211,4 @@ async def _(client, callback_query):
             return await callback_query.edit_message_text(text, reply_markup=buttons)
 
         except TypeError:
-            return await callback_query.answer("maaf pengguna ubot sangat tolol saat mengisi callback", show_alert=True)
+            return await callback_query.answer("maaf pengguna ubot belum mengisi callback", show_alert=True)
