@@ -254,7 +254,7 @@ async def _(client, message):
     Tm = await message.reply("processing . . .")
     bajingan = message.command
     if len(bajingan) != 3:
-        return await Tm.edit(f"gunakan /time user_id hari")
+        return await Tm.edit(f"Gunakan .time user_id hari")
     user_id = int(bajingan[1])
     get_day = int(bajingan[2])
     print(user_id , get_day)
@@ -337,9 +337,9 @@ async def _(client, message):
     if user.id in admin_users:
         return await msg.edit(f"""
 💬 INFORMATION
-name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-id: {user.id}
-keterangan: sudah dalam daftar
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: sᴜᴅᴀʜ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
 """
         )
 
@@ -347,9 +347,9 @@ keterangan: sudah dalam daftar
         await add_to_vars(bot.me.id, "ADMIN_USERS", user.id)
         return await msg.edit(f"""
 💬 INFORMATION
-name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-id: {user.id}
-keterangan: admin
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴀᴅᴍɪɴ
 """
         )
     except Exception as error:
@@ -378,21 +378,19 @@ async def _(client, message):
     if user.id not in admin_users:
         return await msg.edit(f"""
 💬 INFORMATION
-name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-id: {user.id}
-keterangan: tidak daam daftar
-"""
-        )
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
+""")
 
     try:
         await remove_from_vars(bot.me.id, "ADMIN_USERS", user.id)
         return await msg.edit(f"""
 💬 INFORMATION
-name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-id: {user.id}
-keterangan: unadmin
-"""
-        )
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴜɴᴀᴅᴍɪɴ
+""")
     except Exception as error:
         return await msg.edit(error)
 
@@ -406,7 +404,7 @@ async def _(client, message):
     admin_users = await get_list_from_vars(bot.me.id, "ADMIN_USERS")
 
     if not admin_users:
-        return await Sh.edit("<s>daftar admin kosong</s>")
+        return await Sh.edit("<s>ᴅᴀғᴛᴀʀ ᴀᴅᴍɪɴ ᴋᴏsᴏɴɢ</s>")
 
     admin_list = []
     for user_id in admin_users:
@@ -420,9 +418,9 @@ async def _(client, message):
 
     if admin_list:
         response = (
-            "📋 daftar admin:\n\n"
+            "📋 ᴅᴀғᴛᴀʀ ᴀᴅᴍɪɴ :\n\n"
             + "\n".join(admin_list)
-            + f"\n\n⚜️ total admin: {len(admin_list)}"
+            + f"\n\n⚜️ ᴛᴏᴛᴀʟ ᴀᴅᴍɪɴ: {len(admin_list)}"
         )
         return await Sh.edit(response)
     else:
