@@ -37,6 +37,6 @@ async def cek_user_command(client, message):
     }
 
     result_text = f"<blockquote><b><emoji id=5231012545799666522>🔍</emoji> HASIL PENCARIAN USERNAME `{username}` DARI SEMUA SOSMED\n\n</blockquote></b>"
-    result_text += "\n".join([f"<blockquote><b>{platform}: [Klik disini]({link}) 𝐛𝐲𝐊𝐢𝐧𝐠𝐳𝐔𝐬𝐞𝐫𝐛𝐨𝐭</blockquote></b>" for platform, link in platforms.items()])
+    result_text += "\n".join([f"<blockquote><b>{platform}: [Klik disini]({link}) 𝐛𝐲𝐒𝐢𝐭𝐞𝐠𝐚𝐚𝐱</blockquote></b>" for platform, link in platforms.items()])
 
     await message.reply_text(result_text, disable_web_page_preview=True)
