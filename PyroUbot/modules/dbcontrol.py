@@ -328,12 +328,14 @@ INFORMATION
         exp = get_exp.strftime("%d-%m-%Y")
         if user_id in await get_list_from_vars(client.me.id, "ULTRA_PREM"):
             status = "SuperUltra"
-        else:
+        elif user_id in await get_list_from_vars(client.me.id, "PREM_USERS"):
             status = "Premium"
-        else:
+        elif user_id in await get_list_from_vars(client.me.id, "SELER_USERS"):
             status = "Seller"
-        else:
+        elif user_id in await get_list_from_vars(client.me.id, "ADMIN_USERS"):
             status = "Admin"
+        elif user_id in await get_list_from_vars(client.me.id, "PT_USERS"):
+            status = "PT"
         await Sh.edit(f"""
 INFORMATION
 ɴᴀᴍᴇ : {sh.mention}
@@ -341,22 +343,6 @@ INFORMATION
 ɪᴅ : {user_id}
 ᴘʀᴇғɪx : {' '.join(SH)}
 ᴇxᴘɪʀᴇᴅ : {exp}
-""")
-    else:
-        SH = await ubot.get_prefix(user_id)
-        exp = get_exp.strftime("%d-%m-%Y")
-        if user_id in await get_list_from_vars(client.me.id, "PT_USERS"):
-        else:
-            status = "PT"
-        else:
-            status = "Owner"
-            await Sh.edit(f"""
-INFORMATION
-ɴᴀᴍᴇ : {sh.mention}
-ᴘʟᴀɴ : {status}
-ɪᴅ : {user_id}
-ᴘʀᴇғɪx : {' '.join(SH)}
-ᴇxᴘɪʀᴇᴅ : Permanen
 """)
 
 @PY.BOT("addpt")
