@@ -24,6 +24,7 @@ __HELP__ = """
 
 @PY.BOT("prem")
 @PY.SELLER
+@PY.ADMIN
 async def _(client, message):
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
@@ -89,6 +90,7 @@ async def _(client, message):
 
 @PY.BOT("unprem")
 @PY.SELLER
+@PY.ADMIN
 async def _(client, message):
     msg = await message.reply("sedang memproses...")
     user_id = await extract_user(message)
@@ -128,6 +130,7 @@ async def _(client, message):
 
 @PY.BOT("getprem")
 @PY.SELLER
+@PY.ADMIN
 async def _(client, message):
     text = ""
     count = 0
@@ -258,6 +261,7 @@ async def _(client, message):
 
 @PY.BOT("time")
 @PY.SELLER
+@PY.ADMIN
 async def _(client, message):
     Tm = await message.reply("processing . . .")
     bajingan = message.command
@@ -287,6 +291,7 @@ async def _(client, message):
 
 @PY.BOT("cek")
 @PY.SELLER
+@PY.ADMIN
 async def _(client, message):
     Sh = await message.reply("processing . . .")
     user_id = await extract_user(message)
