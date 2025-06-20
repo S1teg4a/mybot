@@ -319,8 +319,11 @@ async def _(client, message):
 <b>ᴇxᴘɪʀᴇᴅ : {exp}</b></blockquote>
 """)
 
-@PY.BOT("addpt")
+@PY.UBOT("addpt")
 async def _(client, message):
+    user = message.from_user
+    if user.id != OWNER_ID:
+        return
     msg = await message.reply("sedang memproses...")
     user_id = await extract_user(message)
     if not user_id:
@@ -333,7 +336,7 @@ async def _(client, message):
     except Exception as error:
         return await msg.edit(error)
 
-    pt_users = await get_list_from_vars(client.me.id, "PT_USERS")
+    pt_users = await get_list_from_vars(bot.me.id, "PT_USERS")
 
     if user.id in pt_users:
         return await msg.edit(f"""
@@ -341,21 +344,27 @@ async def _(client, message):
 ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
 ɪᴅ: {user.id}
 ᴋᴇᴛᴇʀᴀɴɢᴀɴ: sᴜᴅᴀʜ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
-""")
+"""
+        )
 
     try:
-        await add_to_vars(client.me.id, "{PT_USERS", user.id)
+        await add_to_vars(bot.me.id, "PT_USERS", user.id)
         return await msg.edit(f"""
 💬 INFORMATION
 ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
 ɪᴅ: {user.id}
 ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴘᴛ
-""")
+"""
+        )
     except Exception as error:
         return await msg.edit(error)
 
-@PY.BOT("unpt")
+
+@PY.UBOT("unpt")
 async def _(client, message):
+    user = message.from_user
+    if user.id != OWNER_ID:
+        return
     msg = await message.reply("sedang memproses...")
     user_id = await extract_user(message)
     if not user_id:
@@ -368,7 +377,7 @@ async def _(client, message):
     except Exception as error:
         return await msg.edit(error)
 
-    pt_users = await get_list_from_vars(client.me.id, "PT_USERS")
+    pt_users = await get_list_from_vars(bot.me.id, "PT_USERS")
 
     if user.id not in pt_users:
         return await msg.edit(f"""
@@ -379,7 +388,7 @@ async def _(client, message):
 """)
 
     try:
-        await remove_from_vars(client.me.id, "PT_USERS", user.id)
+        await remove_from_vars(bot.me.id, "PT_USERS", user.id)
         return await msg.edit(f"""
 💬 INFORMATION
 ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
@@ -390,10 +399,13 @@ async def _(client, message):
         return await msg.edit(error)
 
 
-@PY.BOT("getpt")
+@PY.UBOT("getpt")
 async def _(client, message):
+    user = message.from_user
+    if user.id != OWNER_ID:
+        return
     Sh = await message.reply("sedang memproses...")
-    pt_users = await get_list_from_vars(client.me.id, "PT_USERS")
+    pt_users = await get_list_from_vars(bot.me.id, "PT_USERS")
 
     if not pt_users:
         return await Sh.edit("<s>ᴅᴀғᴛᴀʀ ᴘᴛ ᴋᴏsᴏɴɢ</s>")
@@ -410,14 +422,14 @@ async def _(client, message):
 
     if pt_list:
         response = (
-            "📋 ᴅᴀғᴛᴀʀ ᴘᴛ:\n\n"
+            "📋 ᴅᴀғᴛᴀʀ ᴘᴛ :\n\n"
             + "\n".join(pt_list)
             + f"\n\n⚜️ ᴛᴏᴛᴀʟ ᴘᴛ: {len(pt_list)}"
         )
         return await Sh.edit(response)
     else:
-        return await Sh.edit("tidak dapat mengambil daftar PT")
-
+        return await Sh.edit("tidak dapat mengambil daftar pt")
+        
 @PY.UBOT("addadmin")
 async def _(client, message):
     user = message.from_user
