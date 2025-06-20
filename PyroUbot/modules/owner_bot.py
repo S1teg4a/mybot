@@ -578,6 +578,29 @@ async def _(client, message):
     except Exception as error:
         return await msg.edit(error)
 
+@PY.UBOT("cekvars")
+async def _(client, message):
+    if message.from_user.id != OWNER_ID:
+        return await message.reply("❌ Khusus OWNER.")
+
+    msg = await message.reply("🔍 Mengambil data vars...")
+    try:
+        pt = await get_list_from_vars(client.me.id, "PT_USERS") or []
+        admin = await get_list_from_vars(client.me.id, "ADMIN_USERS") or []
+        seller = await get_list_from_vars(client.me.id, "SELER_USERS") or []
+        prem = await get_list_from_vars(client.me.id, "PREM_USERS") or []
+
+        return await msg.edit(f"""
+<b>📦 VARS SAAT INI:</b>
+
+👤 <b>PT_USERS:</b> <code>{pt}</code>
+👮 <b>ADMIN_USERS:</b> <code>{admin}</code>
+💰 <b>SELER_USERS:</b> <code>{seller}</code>
+🌟 <b>PREM_USERS:</b> <code>{prem}</code>
+""")
+    except Exception as e:
+        return await msg.edit(f"❌ Error saat mengambil vars:\n<code>{e}</code>")
+
 @PY.UBOT("rmultra")
 async def _(client, message):
     prs = await EMO.PROSES(client)
