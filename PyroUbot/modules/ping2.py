@@ -58,7 +58,7 @@ async def _(client, message):
 {tion} {ngentod} : <code>{client.me.mention}</code>
 {yubot} {kontol} : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b>ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ</b></blockquote>"""
+<blockquote><b>ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ</b></blockquote>"""
         await message.reply(_ping)
     else:
         _ping = f"""
@@ -66,7 +66,7 @@ async def _(client, message):
 {ngentod} : <code>{client.me.mention}</code>
 {kontol} : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b>ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ</b></blockquote>"""
+<blockquote><b>ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ</b></blockquote>"""
         await message.reply(_ping)
 
 @PY.UBOT("ping1")
@@ -101,19 +101,19 @@ async def _(client, message):
         _ping = f"""
 <blockquote>⎆ <emoji id=5260547274957672345>🎲</emoji> ᴘɪɴɢ : {str(delta_ping_formatted).replace('.', ',')} ms
 ⎆ <emoji id=5235948055928262102>⭐</emoji> ᴜᴘᴛɪᴍᴇ : {uptime}
-⎆ <emoji id=5204015897500469606>😢</emoji> ᴋɪɴɢ : <code>{client.me.mention}</code>
-⎆ <emoji id=5194979342144260681>😂</emoji> ᴡᴀʀʀɪᴏʀ : <code>{bot.me.mention}</code></blockquote>
+⎆ <emoji id=5204015897500469606>😢</emoji> ᴜsᴇʀ : <code>{client.me.mention}</code>
+⎆ <emoji id=5194979342144260681>😂</emoji> ʙᴏᴛ : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
+<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
         await message.reply(_ping)
     else:
         _ping = f"""
 <blockquote>⎆ <emoji id=5260547274957672345>🎲</emoji> ᴘɪɴɢ : {str(delta_ping_formatted).replace('.', ',')} ms
 ⎆ <emoji id=5235948055928262102>⭐</emoji> ᴜᴘᴛɪᴍᴇ : {uptime}
-⎆ <emoji id=5204015897500469606>😢</emoji> ᴋɪɴɢ : <code>{client.me.mention}</code>
-⎆ <emoji id=5194979342144260681>😂</emoji> ᴡᴀʀʀɪᴏʀ : <code>{bot.me.mention}</code></blockquote>
+⎆ <emoji id=5204015897500469606>😢</emoji> ᴜsᴇʀ : <code>{client.me.mention}</code>
+⎆ <emoji id=5194979342144260681>😂</emoji> ʙᴏᴛ : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
+<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
         await message.reply(_ping)
 
 @PY.UBOT("ping2")
@@ -152,13 +152,13 @@ async def _(client, message):
 <emoji id=5900041834880571364>😈</emoji> ❃ **Uptime -**
 {uptime}
 
-<emoji id=5897741587835786345>🔥</emoji> **✦҈͜͡➳ Master :**
+<emoji id=5897741587835786345>🔥</emoji> **✦҈͜͡➳ User :**
 <code>{client.me.mention}</code>
 
 <emoji id=5900145373657176313>😂</emoji> **✦҈͜͡➳ Bot :**
 <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
+<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
         await message.reply(_ping)
     else:
         _ping = f"""
@@ -168,13 +168,13 @@ async def _(client, message):
 <emoji id=5900041834880571364>😈</emoji> ❃ **Uptime -**
 {uptime}
 
-<emoji id=5897741587835786345>🔥</emoji> **✦҈͜͡➳ Master :**
+<emoji id=5897741587835786345>🔥</emoji> **✦҈͜͡➳ User :**
 <code>{client.me.mention}</code>
 
 <emoji id=5900145373657176313>😂</emoji> **✦҈͜͡➳ Bot :**
 <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
+<blockquote><b><emoji id=6142927453854632687>🚬</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ <emoji id=6142927453854632687>🚬</emoji></b></blockquote>"""
         await message.reply(_ping)
 
 @PY.UBOT("p")
@@ -211,17 +211,17 @@ async def _(client, message):
         _ping = f"""
 ⎆ <emoji id=6187958626880066617>🙂</emoji> ᴘɪɴɢ : {str(delta_ping_formatted).replace('.', ',')} ms
 ⎆ <emoji id=5453865509592243339>🔵</emoji> ᴜᴘᴛɪᴍᴇ : {uptime}
-⎆ <emoji id=5364078230426890290>🌐</emoji> ᴋɪɴɢ : <code>{client.me.mention}</code>
-⎆ <emoji id=5208573502046610594>🏪</emoji> ᴡᴀʀʀɪᴏʀ : <code>{bot.me.mention}</code></blockquote>
+⎆ <emoji id=5364078230426890290>🌐</emoji> ᴜsᴇʀ : <code>{client.me.mention}</code>
+⎆ <emoji id=5208573502046610594>🏪</emoji> ʙᴏᴛ : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b><emoji id=5364265190353286344>📊</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ <emoji id=5364265190353286344>📊</emoji></b></blockquote>"""
+<blockquote><b><emoji id=5364265190353286344>📊</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ <emoji id=5364265190353286344>📊</emoji></b></blockquote>"""
         await message.reply(_ping)
     else:
         _ping = f"""
 <blockquote>⎆ <emoji id=6186192201320502539>🚀</emoji> ᴘɪɴɢ : {str(delta_ping_formatted).replace('.', ',')} ms
 ⎆ <emoji id=5364078230426890290>🌐</emoji> ᴜᴘᴛɪᴍᴇ : {uptime}
-⎆ <emoji id=6187958626880066617>🙂</emoji> ᴋɪɴɢ : <code>{client.me.mention}</code>
-⎆ <emoji id=5208573502046610594>🏪</emoji> ᴡᴀʀʀɪᴏʀ : <code>{bot.me.mention}</code></blockquote>
+⎆ <emoji id=6187958626880066617>🙂</emoji> ᴜsᴇʀ : <code>{client.me.mention}</code>
+⎆ <emoji id=5208573502046610594>🏪</emoji> ʙᴏᴛ : <code>{bot.me.mention}</code></blockquote>
 
-<blockquote><b><emoji id=5364265190353286344>📊</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ᴘʀᴇᴍɪᴜᴍ ࿈ᣄ <emoji id=5364265190353286344>📊</emoji></b></blockquote>"""
+<blockquote><b><emoji id=5364265190353286344>📊</emoji> ᣃ࿈ ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax ࿈ᣄ <emoji id=5364265190353286344>📊</emoji></b></blockquote>"""
         await message.reply(_ping)
