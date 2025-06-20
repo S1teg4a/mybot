@@ -43,7 +43,7 @@ async def _(client, message):
         return await msg.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
 <b>ɪᴅ: {user.id}</b>
-<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ꜱᴜᴅᴀʜ ᴘʀᴇᴍɪᴜᴍ</ci></b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ꜱᴜᴅᴀʜ ᴘʀᴇᴍɪᴜᴍ</b>
 <b>ᴇxᴘɪʀᴇᴅ: {get_bulan} ʙᴜʟᴀɴ</b></blockquote>
 """
         )
@@ -431,7 +431,6 @@ async def _(client, message):
         return await Sh.edit("tidak dapat mengambil daftar PT")
 
 @PY.BOT("addadmin")
-@PY.OWNER
 @PY.PT
 async def _(client, message):
     msg = await message.reply("sedang memproses...")
@@ -469,7 +468,6 @@ async def _(client, message):
 
 
 @PY.BOT("unadmin")
-@PY.OWNER
 @PY.PT
 async def _(client, message):
     msg = await message.reply("sedang memproses...")
@@ -507,7 +505,6 @@ async def _(client, message):
 
 
 @PY.BOT("getadmin")
-@PY.OWNER
 @PY.PT
 async def _(client, message):
     Sh = await message.reply("sedang memproses...")
