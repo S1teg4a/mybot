@@ -68,6 +68,6 @@ Ashar : `{result['items'][0]['asr']}`
 Maghrib : `{result['items'][0]['maghrib']}`
 Isya : `{result['items'][0]['isha']}`**
 
-BUY UBOT DI: @Boyszzzz</b></blockquote>
+ᴜsᴇʀʙᴏᴛ ʙʏ @Sitegaax</b></blockquote>
 """
     await message.reply_text(txt)
