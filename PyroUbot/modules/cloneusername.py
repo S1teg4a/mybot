@@ -19,11 +19,11 @@ STORAGE = {}
 async def impostor(client: Client, message: Message):
     user_id = message.from_user.id  
     inputArgs = message.text.split(maxsplit=1)[1] if len(message.text.split()) > 1 else ""
-    WannX2 = ["@Boyszzzz"]
+    WannX2 = ["@Sitegaax"]
 
     if inputArgs in WannX2:
-        await message.edit("<blockquote><b>❌ [Kontol] - Tidak dapat menyamar sebagai Developer Kingz😡</b></blockquote>")
-        await client.send_message("<blockquote><b> @KingzUserbotSupport", "Maaf Telah MengClone Boysz 🥺</b></blockquote>")
+        await message.edit("<blockquote><b>❌ [Kontol] - Tidak dapat menyamar sebagai Developer Sitegaa😡</b></blockquote>")
+        await client.send_message("<blockquote><b> @Spubotme", "Maaf Telah MengClone Sitegaa 🥺</b></blockquote>")
         return
 
     xx = await message.edit("<blockquote><b>⏰ Memproses...</b></blockquote>")
