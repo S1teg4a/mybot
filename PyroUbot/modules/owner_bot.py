@@ -8,9 +8,11 @@ from PyroUbot import *
 
 @PY.UBOT("prem")
 async def _(client, message):
-    user = message.from_user
-    seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
-    if user.id not in seller_id:
+    user = message.from_user 
+    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
+    admin_id = await get_list_from_vars(client.me.id, "ADMIN_USERS")
+    seller_id = await get_list_from_vars(client.me.id, "SELER_USERS")
+    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and uid != OWNER_ID:
         return
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
@@ -115,8 +117,10 @@ async def _(client, message):
     text = ""
     count = 0
     user = message.from_user
-    seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
-    if user.id not in seller_id:
+    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
+    admin_id = await get_list_from_vars(client.me.id, "ADMIN_USERS")
+    seller_id = await get_list_from_vars(client.me.id, "SELER_USERS")
+    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and uid != OWNER_ID:
         return
     prem = await get_list_from_vars(bot.me.id, "PREM_USERS")
     prem_users = []
@@ -340,20 +344,20 @@ async def _(client, message):
 
     if user.id in pt_users:
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: sᴜᴅᴀʜ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: sᴜᴅᴀʜ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ</b></blockquote>
 """
         )
 
     try:
         await add_to_vars(bot.me.id, "PT_USERS", user.id)
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴘᴛ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴘᴛ</b></blockquote>
 """
         )
     except Exception as error:
@@ -381,19 +385,19 @@ async def _(client, message):
 
     if user.id not in pt_users:
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ</b></blockquote>
 """)
 
     try:
         await remove_from_vars(bot.me.id, "PT_USERS", user.id)
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴜɴᴘᴛ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴜɴᴘᴛ</b></blockquote>
 """)
     except Exception as error:
         return await msg.edit(error)
@@ -451,20 +455,20 @@ async def _(client, message):
 
     if user.id in admin_users:
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: sᴜᴅᴀʜ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: sᴜᴅᴀʜ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ</b></blockquote>
 """
         )
 
     try:
         await add_to_vars(bot.me.id, "ADMIN_USERS", user.id)
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴀᴅᴍɪɴ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴀᴅᴍɪɴ</b></blockquote>
 """
         )
     except Exception as error:
@@ -492,19 +496,19 @@ async def _(client, message):
 
     if user.id not in admin_users:
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ</b></blockquote>
 """)
 
     try:
         await remove_from_vars(bot.me.id, "ADMIN_USERS", user.id)
         return await msg.edit(f"""
-💬 INFORMATION
-ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
-ɪᴅ: {user.id}
-ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴜɴᴀᴅᴍɪɴ
+💬 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐒𝐈 :
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴜɴᴀᴅᴍɪɴ</b></blockquote>
 """)
     except Exception as error:
         return await msg.edit(error)
