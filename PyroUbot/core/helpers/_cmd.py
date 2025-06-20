@@ -40,7 +40,7 @@ class PY:
         async def function(client, message):
             user = message.from_user
             pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
-            if user.id not in pt_id:
+            if user.id not in pt_id and uid != OWNER_ID:
                 return
             return await func(client, message)
 
