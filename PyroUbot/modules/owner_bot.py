@@ -9,10 +9,10 @@ from PyroUbot import *
 @PY.UBOT("prem")
 async def _(client, message):
     user = message.from_user 
-    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
-    admin_id = await get_list_from_vars(client.me.id, "ADMIN_USERS")
-    seller_id = await get_list_from_vars(client.me.id, "SELER_USERS")
-    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and user.id != OWNER_ID:
+    pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
+    admin_id = await get_list_from_vars(bot.me.id, "ADMIN_USERS")
+    seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
+    if user.id pt_id and user.id admin_id and user.id seller_id and user.id != OWNER_ID:
         return
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
@@ -32,7 +32,7 @@ async def _(client, message):
         return await msg.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
 <b>ɪᴅ: `{user.id}`</b>
-<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ꜱᴜᴅᴀʜ ᴘʀᴇᴍɪᴜᴍ</ci></b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ꜱᴜᴅᴀʜ ᴘʀᴇᴍɪᴜᴍ</b>
 <b>ᴇxᴘɪʀᴇᴅ: {get_bulan} ʙᴜʟᴀɴ</b></blockquote>
 """
         )
@@ -96,7 +96,7 @@ async def _(client, message):
         return await msg.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
 <b>ɪᴅ: `{user.id}`</b>
-<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴛᴇʀᴅᴀꜰᴛᴀʀ</ci></b></blockquote>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴛᴇʀᴅᴀꜰᴛᴀʀ</b></blockquote>
 """
         )
     try:
@@ -105,7 +105,7 @@ async def _(client, message):
         return await msg.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
 <b>ɪᴅ: `{user.id}`</b>
-<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛᴇʟᴀʜ ᴅɪ ʜᴀᴘᴜꜱ ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀꜱᴇ</ci></b></blockquote>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛᴇʟᴀʜ ᴅɪ ʜᴀᴘᴜꜱ ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀꜱᴇ</b></blockquote>
 """
         )
     except Exception as error:
@@ -117,10 +117,10 @@ async def _(client, message):
     text = ""
     count = 0
     user = message.from_user
-    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
-    admin_id = await get_list_from_vars(client.me.id, "ADMIN_USERS")
-    seller_id = await get_list_from_vars(client.me.id, "SELER_USERS")
-    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and uid != OWNER_ID:
+    pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
+    admin_id = await get_list_from_vars(bot.me.id, "ADMIN_USERS")
+    seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
+    if user.id pt_id and user.id admin_id and user.id seller_id and user.id != OWNER_ID:
         return
     prem = await get_list_from_vars(bot.me.id, "PREM_USERS")
     prem_users = []
@@ -253,8 +253,8 @@ async def _(client, message):
 @PY.UBOT("time")
 async def _(client, message):
     user = message.from_user
-    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
-    if user.id not in pt_id and user.id != OWNER_ID:
+    pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
+    if user.id pt_id and user.id != OWNER_ID:
         return
     Tm = await message.reply("processing . . .")
     bajingan = message.command
@@ -284,8 +284,8 @@ async def _(client, message):
 @PY.UBOT("cek")
 async def _(client, message):
     user = message.from_user
-    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
-    if user.id not in pt_id and user.id != OWNER_ID:
+    pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
+    if user.id pt_id and user.id != OWNER_ID:
         return
     Sh = await message.reply("ᴘʀᴏᴄᴇꜱꜱɪɴɢ . . .")
     user_id = await extract_user(message)
@@ -307,15 +307,15 @@ async def _(client, message):
     else:
         SH = await ubot.get_prefix(user_id)
         exp = get_exp.strftime("%d-%m-%Y")
-        if user_id in await get_list_from_vars(client.me.id, "ULTRA_PREM"):
+        if user_id in await get_list_from_vars(bot.me.id, "ULTRA_PREM"):
             status = "SuperUltra"
-        elif user_id in await get_list_from_vars(client.me.id, "PREM_USERS"):
+        elif user_id in await get_list_from_vars(bot.me.id, "PREM_USERS"):
             status = "Premium"
-        elif user_id in await get_list_from_vars(client.me.id, "SELER_USERS"):
+        elif user_id in await get_list_from_vars(bot.me.id, "SELER_USERS"):
             status = "Seller"
-        elif user_id in await get_list_from_vars(client.me.id, "ADMIN_USERS"):
+        elif user_id in await get_list_from_vars(bot.me.id, "ADMIN_USERS"):
             status = "Admin"
-        elif user_id in await get_list_from_vars(client.me.id, "PT_USERS"):
+        elif user_id in await get_list_from_vars(bot.me.id, "PT_USERS"):
             status = "PT"
         await Sh.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: {sh.mention}</b>
