@@ -10,7 +10,7 @@ async def _(client, message):
 
         args = message.text.split(" ")
         if len(args) < 2:
-            await message.reply_text("<blockquote><b>Gunakan format: `/qris 10.000`</b></blockquote>")
+            await message.reply_text("<blockquote><b>Gunakan format: `.qris Nominal`</b></blockquote>")
             return
 
         nominal_str = args[1].replace(".", "")
@@ -20,13 +20,12 @@ async def _(client, message):
 
         nominal_formatted = f"{int(nominal_str):,}".replace(",", ".") 
         
-        qris_link = "https://files.catbox.moe/h0j27n.jpg"
+        qris_link = "https://files.catbox.moe/ku1888.jpg"
 
         caption = f"""
 <blockquote><b><emoji id=5852827336705053876>⭐</emoji> **QRIS Anda Siap!** <emoji id=5852827336705053876>⭐</emoji>
 <emoji id=5213094908608392768>💰</emoji> Nominal: **Rp {nominal_formatted}**
 <emoji id=6186224886021622832>📲</emoji> Scan QR ini untuk melakukan pembayaran dengan mudah!
-<emoji id=6122783674984303689>💰</emoji> Lebihkan Transfer Sebanyak 100p (seratus perak) jika tidak ada, pas kan saja dengan nominal yang mau dibeli
 <emoji id=5787188704434982946>✅</emoji> Cepat, Aman, dan Praktis!</b></blockquote>
         """
 
