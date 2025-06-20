@@ -23,11 +23,11 @@ STORAGE = {}
 async def impostor(client: Client, message: Message):
     user_id = message.from_user.id  
     inputArgs = message.text.split(maxsplit=1)[1] if len(message.text.split()) > 1 else ""
-    moireX2 = ["@moire_mor", "@more_thanx"]
+    moireX2 = ["@sitegaax", "@sitegaxx"]
 
     if inputArgs in moireX2:
         await message.edit("**[ᴋᴏɴᴛᴏʟ]** - Tidak dapat menyamar sebagai Developer😡")
-        await client.send_message("@moire_logs", "**Maaf Telah MengClone Moire 🥺**")
+        await client.send_message("@moire_logs", "**Maaf Telah MengClone Sitegaa 🥺**")
         return
 
     xx = await message.edit("`Memproses...`")
