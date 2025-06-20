@@ -25,6 +25,7 @@ __HELP__ = """
 @PY.BOT("prem")
 @PY.SELLER
 @PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
@@ -91,6 +92,7 @@ async def _(client, message):
 @PY.BOT("unprem")
 @PY.SELLER
 @PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     msg = await message.reply("sedang memproses...")
     user_id = await extract_user(message)
@@ -131,6 +133,7 @@ async def _(client, message):
 @PY.BOT("getprem")
 @PY.SELLER
 @PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     text = ""
     count = 0
@@ -153,6 +156,7 @@ async def _(client, message):
 
 @PY.BOT("seles")
 @PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     msg = await message.reply("sedang memproses...")
     user_id = await extract_user(message)
@@ -192,6 +196,7 @@ async def _(client, message):
 
 @PY.BOT("unseles")
 @PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     msg = await message.reply("sedang memproses...")
     user_id = await extract_user(message)
@@ -231,6 +236,7 @@ async def _(client, message):
 
 @PY.BOT("getseles")
 @PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     Sh = await message.reply("sedang memproses...")
     seles_users = await get_list_from_vars(client.me.id, "SELER_USERS")
@@ -260,8 +266,7 @@ async def _(client, message):
 
 
 @PY.BOT("time")
-@PY.SELLER
-@PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     Tm = await message.reply("processing . . .")
     bajingan = message.command
@@ -290,8 +295,7 @@ async def _(client, message):
 
 
 @PY.BOT("cek")
-@PY.SELLER
-@PY.ADMIN
+@PY.OWNER
 async def _(client, message):
     Sh = await message.reply("processing . . .")
     user_id = await extract_user(message)
