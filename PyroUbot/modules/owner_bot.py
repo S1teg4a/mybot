@@ -12,7 +12,7 @@ async def _(client, message):
     pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
     admin_id = await get_list_from_vars(bot.me.id, "ADMIN_USERS")
     seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
-    if user.id pt_id and user.id admin_id and user.id seller_id and user.id != OWNER_ID:
+    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and user.id != OWNER_ID:
         return
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
@@ -120,7 +120,7 @@ async def _(client, message):
     pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
     admin_id = await get_list_from_vars(bot.me.id, "ADMIN_USERS")
     seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
-    if user.id pt_id and user.id admin_id and user.id seller_id and user.id != OWNER_ID:
+    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and user.id != OWNER_ID:
         return
     prem = await get_list_from_vars(bot.me.id, "PREM_USERS")
     prem_users = []
@@ -254,7 +254,7 @@ async def _(client, message):
 async def _(client, message):
     user = message.from_user
     pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
-    if user.id pt_id and user.id != OWNER_ID:
+    if user.id not in pt_id and user.id != OWNER_ID:
         return
     Tm = await message.reply("processing . . .")
     bajingan = message.command
@@ -285,7 +285,7 @@ async def _(client, message):
 async def _(client, message):
     user = message.from_user
     pt_id = await get_list_from_vars(bot.me.id, "PT_USERS")
-    if user.id pt_id and user.id != OWNER_ID:
+    if user.id not in pt_id and user.id != OWNER_ID:
         return
     Sh = await message.reply("ᴘʀᴏᴄᴇꜱꜱɪɴɢ . . .")
     user_id = await extract_user(message)
