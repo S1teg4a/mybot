@@ -54,13 +54,13 @@ async def done_command(client, message):
     try:
         args = message.text.split(" ", 1)
         if len(args) < 2 or "," not in args[1]:
-            await message.reply_text("<blockquote>Penggunaan: .done name item,price,payment</blockquote>")
+            await message.reply_text("<blockquote>Penggunaan: .d name item,price,payment</blockquote>")
             return
 
         parts = args[1].split(",", 2)
 
         if len(parts) < 2:
-            await message.reply_text("<blockquote>Penggunaan: .done name item,price,payment</blockquote>")
+            await message.reply_text("<blockquote>Penggunaan: .d name item,price,payment</blockquote>")
             return
 
         name_item = parts[0].strip()
@@ -73,8 +73,8 @@ async def done_command(client, message):
             f"<emoji id=5235457574958023592>💸</emoji> <b>ɴᴏᴍɪɴᴀʟ : {price}</b>\n"
             f"<emoji id=5267421370114914946>⏱</emoji> <b>ᴡᴀᴋᴛᴜ ᴘᴇᴍʙᴇʟɪᴀɴ : {time}</b>\n"
             f"<emoji id=5204242830687494041>🧾</emoji> <b>ᴘᴀʏᴍᴇɴᴛ : {payment}</b></blockquote>"
-            f" <blockquote><b> ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴛᴇʟᴀʜ ᴏʀᴅᴇʀ ᴅɪ <a href=tg://openmessage?user_id={OWNER_ID}>𝐀𝐥𝐰𝐚𝐲𝐬𝐁𝐨𝐲𝐬𝐳✮</a></blockquote"
-            f" <blockquote>ᴛᴇsᴛɪᴍᴏɴɪ : <a href=https://t.me/TESTIPRIBADIBOYSZZZ>ᴄʟɪᴄᴋ</a> </blockquote>"
+            f" <blockquote><b> ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴛᴇʟᴀʜ ᴏʀᴅᴇʀ ᴅɪ <a href=tg://openmessage?user_id={OWNER_ID}>𝐒𝐢𝐭𝐞𝐠𝐚𝐚𝐱✮</a></blockquote>"
+            f" <blockquote>ᴛᴇsᴛɪᴍᴏɴɪ : <a href=https://t.me/testisitegaa>ᴄʟɪᴄᴋ</a> </blockquote>"
         )
         await izzy_ganteng.edit(response)
 
