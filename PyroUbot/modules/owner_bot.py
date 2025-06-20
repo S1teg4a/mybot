@@ -12,7 +12,7 @@ async def _(client, message):
     pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
     admin_id = await get_list_from_vars(client.me.id, "ADMIN_USERS")
     seller_id = await get_list_from_vars(client.me.id, "SELER_USERS")
-    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and uid != OWNER_ID:
+    if user.id not in pt_id and user.id not in admin_id and user.id not in seller_id and != OWNER_ID:
         return
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
@@ -253,7 +253,8 @@ async def _(client, message):
 @PY.UBOT("time")
 async def _(client, message):
     user = message.from_user
-    if user.id != OWNER_ID:
+    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
+    if user.id not in pt_id and != OWNER_ID:
         return
     Tm = await message.reply("processing . . .")
     bajingan = message.command
@@ -283,7 +284,8 @@ async def _(client, message):
 @PY.UBOT("cek")
 async def _(client, message):
     user = message.from_user
-    if user.id != OWNER_ID:
+    pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
+    if user.id not in pt_id and != OWNER_ID:
         return
     Sh = await message.reply("ᴘʀᴏᴄᴇꜱꜱɪɴɢ . . .")
     user_id = await extract_user(message)
