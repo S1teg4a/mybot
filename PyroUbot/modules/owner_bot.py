@@ -269,8 +269,8 @@ async def _(client, message):
     expire_date = now + timedelta(days=int(get_day))
     await set_expired_date(user_id, expire_date)
     await Tm.edit(f"""<blockquote><b><emoji id=5215538577496090960>💬</emoji> INFORMATION
- name: {user.mention}
- id: {get_id}
+ ɴᴀᴍᴇ: {user.mention}
+ ɪᴅ: {get_id}
  aktifkan_selama: {get_day} hari</b></blockquote>
 """
     )
@@ -303,17 +303,120 @@ async def _(client, message):
         exp = get_exp.strftime("%d-%m-%Y")
         if user_id in await get_list_from_vars(bot.me.id, "ULTRA_PREM"):
             status = "SuperUltra"
-        else:
+        elif user_id in await get_list_from_vars(bot.me.id, "PREM_USERS"):
             status = "Premium"
+        elif user_id in await get_list_from_vars(bot.me.id, "SELER_USERS"):
+            status = "Seller"
+        elif user_id in await get_list_from_vars(bot.me.id, "ADMIN_USERS"):
+            status = "Admin"
+        elif user_id in await get_list_from_vars(bot.me.id, "PT_USERS"):
+            status = "PT"
         await Sh.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: {sh.mention}</b>
 <b>ɪᴅ: `{user_id}`</b>
 <b>ᴘʟᴀɴ : {status}</b>
 <b>ᴘʀᴇꜰɪx : {' '.join(SH)}</b>
 <b>ᴇxᴘɪʀᴇᴅ : {exp}</b></blockquote>
-"""
+""")
+
+@PY.BOT("addpt")
+async def _(client, message):
+    msg = await message.reply("sedang memproses...")
+    user_id = await extract_user(message)
+    if not user_id:
+        return await msg.edit(
+            f"{message.text} user_id/username"
         )
 
+    try:
+        user = await client.get_users(user_id)
+    except Exception as error:
+        return await msg.edit(error)
+
+    pt_users = await get_list_from_vars(client.me.id, "PT_USERS")
+
+    if user.id in pt_users:
+        return await msg.edit(f"""
+💬 INFORMATION
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: sᴜᴅᴀʜ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
+""")
+
+    try:
+        await add_to_vars(client.me.id, "{PT_USERS", user.id)
+        return await msg.edit(f"""
+💬 INFORMATION
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴘᴛ
+""")
+    except Exception as error:
+        return await msg.edit(error)
+
+@PY.BOT("unpt")
+async def _(client, message):
+    msg = await message.reply("sedang memproses...")
+    user_id = await extract_user(message)
+    if not user_id:
+        return await msg.edit(
+            f"{message.text} user_id/username"
+        )
+
+    try:
+        user = await client.get_users(user_id)
+    except Exception as error:
+        return await msg.edit(error)
+
+    pt_users = await get_list_from_vars(client.me.id, "PT_USERS")
+
+    if user.id not in pt_users:
+        return await msg.edit(f"""
+💬 INFORMATION
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ
+""")
+
+    try:
+        await remove_from_vars(client.me.id, "PT_USERS", user.id)
+        return await msg.edit(f"""
+💬 INFORMATION
+ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
+ɪᴅ: {user.id}
+ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴜɴᴘᴛ
+""")
+    except Exception as error:
+        return await msg.edit(error)
+
+
+@PY.BOT("getpt")
+async def _(client, message):
+    Sh = await message.reply("sedang memproses...")
+    pt_users = await get_list_from_vars(client.me.id, "PT_USERS")
+
+    if not pt_users:
+        return await Sh.edit("<s>ᴅᴀғᴛᴀʀ ᴘᴛ ᴋᴏsᴏɴɢ</s>")
+
+    pt_list = []
+    for user_id in pt_users:
+        try:
+            user = await client.get_users(int(user_id))
+            pt_list.append(
+                f"👤 [{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) | {user.id}"
+            )
+        except:
+            continue
+
+    if pt_list:
+        response = (
+            "📋 ᴅᴀғᴛᴀʀ ᴘᴛ:\n\n"
+            + "\n".join(pt_list)
+            + f"\n\n⚜️ ᴛᴏᴛᴀʟ ᴘᴛ: {len(pt_list)}"
+        )
+        return await Sh.edit(response)
+    else:
+        return await Sh.edit("tidak dapat mengambil daftar PT")
 
 @PY.UBOT("addadmin")
 async def _(client, message):
