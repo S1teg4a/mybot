@@ -25,7 +25,7 @@ async def chat_gpt(client, message):
                 "<emoji id=5019523782004441717>❌</emoji>mohon gunakan format\ncontoh : .bard query"
             )
         else:
-            prs = await message.reply_text(f"<emoji id=5469745532693923461>♾</emoji>Proccesing Kingz....")
+            prs = await message.reply_text(f"<emoji id=5469745532693923461>♾</emoji>Proccesing....")
             a = message.text.split(' ', 1)[1]
             response = requests.get(f'https://api.botcahx.eu.org/api/search/bing-chat?text={a}&apikey=@moire_mor')
 
