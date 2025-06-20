@@ -34,6 +34,17 @@ class PY:
             return await func(client, message)
 
         return function
+
+    @staticmethod
+    def PT(func):
+        async def function(client, message):
+            user = message.from_user
+            pt_id = await get_list_from_vars(client.me.id, "PT_USERS")
+            if user.id not in pt_id:
+                return
+            return await func(client, message)
+
+    return function
     
     @staticmethod
     def NO_CMD_UBOT(result, ubot):
