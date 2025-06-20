@@ -44,7 +44,7 @@ class PY:
                 return
             return await func(client, message)
 
-    return function
+        return function
     
     @staticmethod
     def NO_CMD_UBOT(result, ubot):
