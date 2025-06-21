@@ -22,10 +22,10 @@ async def main():
             await asyncio.wait_for(ubot_.start(), timeout=10)
         except asyncio.TimeoutError:
             await remove_ubot(int(_ubot["name"]))
-            print(f"[ɪɴғᴏ]: {int(_ubot['name'])} ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴍᴇʀᴇsᴘᴏɴᴇ")
+            print(f"[ɪɴғᴏ]: {int(_ubot['name'])} 𝑻𝒊𝒅𝒂𝒌 𝒅𝒂𝒑𝒂𝒕 𝒎𝒆𝒓𝒆𝒔𝒑𝒐𝒏")
         except Exception:
             await remove_ubot(int(_ubot["name"]))
-            print(f"[ɪɴғᴏ]: {int(_ubot['name'])} ʙᴇʀʜᴀsɪʟ ᴅɪ ʜᴀᴘᴜs")
+            print(f"[ɪɴғᴏ]: {int(_ubot['name'])} 𝑩𝒆𝒓𝒉𝒂𝒔𝒊𝒍 𝒅𝒊 𝒉𝒂𝒑𝒖𝒔")
     await bash("rm -rf *session*")
     await asyncio.gather(loadPlugins(), installPeer(), expiredUserbots())
     stop_event = asyncio.Event()
