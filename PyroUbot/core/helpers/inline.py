@@ -67,7 +67,7 @@ def create_inline_keyboard(text, user_id=False, is_back=False):
         markup.inline_keyboard.append(
             [
                 InlineKeyboardButton(
-                    "ᴋᴇᴍʙᴀʟɪ",
+                    "𝑲𝒆𝒎𝒃𝒂𝒍𝒊",
                     f"_gtnote {int(user_id.split('_')[0])}_{user_id.split('_')[1]}",
                 )
             ]
@@ -81,13 +81,13 @@ class BTN:
         button = [
             [
                 InlineKeyboardButton(
-                    text="ᴛᴜᴛᴜᴘ",
+                    text="𝑻𝒖𝒕𝒖𝒑",
                     callback_data=f"alv_cls {int(get_id[1])} {int(get_id[2])}",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="ʜᴇʟᴘ",
+                    text="𝑯𝒆𝒍𝒑",
                     callback_data="help_back",
                 )
             ]
@@ -96,10 +96,10 @@ class BTN:
 
     def BOT_HELP(message):
         button = [
-            [InlineKeyboardButton("ʀᴇsᴛᴀʀᴛ", callback_data="reboot")],
-            [InlineKeyboardButton("ꜱʏꜱᴛᴇᴍ", callback_data="system")],
-            [InlineKeyboardButton("ᴜʙᴏᴛ", callback_data="ubot")],
-            [InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", callback_data="update")],
+            [InlineKeyboardButton("𝑹𝒆𝒔𝒕𝒂𝒓𝒕", callback_data="reboot")],
+            [InlineKeyboardButton("𝑺𝒚𝒔𝒕𝒆𝒎", callback_data="system")],
+            [InlineKeyboardButton("𝑼𝒃𝒐𝒕", callback_data="ubot")],
+            [InlineKeyboardButton("𝑼𝒑𝒅𝒂𝒕𝒆", callback_data="update")],
         ]
         return button
         
@@ -109,19 +109,19 @@ class BTN:
         for X in range(1, 13):
             keyboard.append(
                 InlineKeyboardButton(
-                    f"{X} ʙᴜʟᴀɴ ",
+                    f"{X} 𝑩𝒖𝒍𝒂𝒏 ",
                     callback_data=f"success {user_id} {X}",
                 )
             )
         buttons.add(*keyboard)
         buttons.row(
             InlineKeyboardButton(
-                "⦪ ᴅᴀᴘᴀᴛᴋᴀɴ ᴘʀᴏfɪʟ ⦫", callback_data=f"profil {user_id}"
+                "⦪ 𝑫𝒂𝒑𝒂𝒕𝒌𝒂𝒏 𝒑𝒓𝒐𝒇𝒊𝒍 ⦫", callback_data=f"profil {user_id}"
             )
         )
         buttons.row(
             InlineKeyboardButton(
-                "⦪ ᴛᴏʟᴀᴋ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ⦫", callback_data=f"failed {user_id}"
+                "⦪ 𝑻𝒐𝒍𝒂𝒌 𝒑𝒆𝒎𝒃𝒂𝒚𝒂𝒓𝒂𝒏 ⦫", callback_data=f"failed {user_id}"
             )
         )
         return buttons
@@ -136,26 +136,26 @@ class BTN:
     def START(message):
         if not message.from_user.id == OWNER_ID:
             button = [
-                [InlineKeyboardButton("⦪ ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ ⦫", callback_data="bahan")],
+                [InlineKeyboardButton("⦪ 𝑩𝒆𝒍𝒊 𝑼𝒔𝒆𝒓𝒃𝒐𝒕 ⦫", callback_data="bahan")],
                 [
-                    InlineKeyboardButton("⦪ ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ ⳼", url="t.me/spubotme"), 
-                    InlineKeyboardButton("⦪ ᴏᴡɴᴇʀ ᴛᴇsᴛɪᴍᴏɴɪ ⦫", url="t.me/testisitegaa")
+                    InlineKeyboardButton("⦪ 𝑮𝒓𝒐𝒖𝒑 𝒔𝒖𝒑𝒑𝒐𝒓𝒕 ⳼", url="t.me/spubotme"), 
+                    InlineKeyboardButton("⦪ 𝑶𝒘𝒏𝒆𝒓 𝒕𝒆𝒔𝒕𝒊𝒎𝒐𝒏𝒊 ⦫", url="t.me/testisitegaa")
                 ],
                 [
-                    InlineKeyboardButton("⦪ ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ ⳼", callback_data="buat_ubot"),
-                    InlineKeyboardButton("⦪ ʜᴇʟᴘ ᴍᴇɴᴜ ⦫", callback_data="help_back")
+                    InlineKeyboardButton("⦪ 𝑩𝒖𝒂𝒕 𝑼𝒔𝒆𝒓𝒃𝒐𝒕 ⳼", callback_data="buat_ubot"),
+                    InlineKeyboardButton("⦪ 𝑯𝒆𝒍𝒑 𝒎𝒆𝒏𝒖 ⦫", callback_data="help_back")
                 ],
-                [InlineKeyboardButton("⦪ sᴜᴘᴘᴏʀᴛ ⦫", callback_data="support")]
+                [InlineKeyboardButton("⦪ 𝑺𝒖𝒑𝒑𝒐𝒓𝒕 ⦫", callback_data="support")]
             ]
         else:
             button = [
-                [InlineKeyboardButton("⦪ ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ ⦫", callback_data="bahan")],
+                [InlineKeyboardButton("⦪ 𝑩𝒖𝒂𝒕 𝑼𝒔𝒆𝒓𝒃𝒐𝒕 ⦫", callback_data="bahan")],
                 [
-                    InlineKeyboardButton("⦪ ɢɪᴛᴘᴜs ⦫", callback_data="cb_gitpull"),
-                    InlineKeyboardButton("⦪ ʀᴇsᴛᴀʀᴛ ⦫", callback_data="cb_restart")
+                    InlineKeyboardButton("⦪ 𝑮𝒊𝒕𝒑𝒖𝒍𝒍 ⦫", callback_data="cb_gitpull"),
+                    InlineKeyboardButton("⦪ 𝑹𝒆𝒔𝒕𝒂𝒓𝒕 ⦫", callback_data="cb_restart")
                 ],
                 [
-                    InlineKeyboardButton("⦪ ʟɪsᴛ ᴜsᴇʀʙᴏᴛ ⦫", callback_data="cek_ubot")
+                    InlineKeyboardButton("⦪ 𝑳𝒊𝒔𝒕 𝑼𝒔𝒆𝒓𝒃𝒐𝒕 ⦫", callback_data="cek_ubot")
                 ]
             ]
         return button
@@ -172,8 +172,8 @@ class BTN:
                     callback_data=f"tambah {query}",
                 ),
             ],
-            [InlineKeyboardButton("⦪ ᴋᴏɴꜰɪʀᴍᴀsɪ ⦫", callback_data="confirm")],
-            [InlineKeyboardButton("⦪ ʙᴀᴛᴀʟᴋᴀɴ ⦫", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("⦪ 𝑲𝒐𝒏𝒇𝒊𝒓𝒎𝒂𝒔𝒊 ⦫", callback_data="confirm")],
+            [InlineKeyboardButton("⦪ 𝑩𝒂𝒕𝒂𝒍𝒌𝒂𝒏 ⦫", callback_data=f"home {user_id}")],
         ]
         return button
 
@@ -182,13 +182,13 @@ class BTN:
         button = [
             [
                 InlineKeyboardButton(
-                    "⦪ ʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀsᴇ ⦫",
+                    "⦪ 𝑯𝒂𝒑𝒖𝒔 𝒅𝒂𝒓𝒊 𝒅𝒂𝒕𝒂𝒃𝒂𝒔𝒆 ⦫",
                     callback_data=f"del_ubot {int(user_id)}",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    "⦪ ᴄᴇᴋ ᴍᴀsᴀ ᴀᴋᴛɪғ ⦫",
+                    "⦪ 𝑪𝒆𝒌 𝒎𝒂𝒔𝒂 𝒂𝒌𝒕𝒊𝒇 ⦫",
                     callback_data=f"cek_masa_aktif {int(user_id)}",
                 )
             ],
@@ -203,11 +203,11 @@ class BTN:
         button = [
             [
                 InlineKeyboardButton(
-                    "⦪ ᴋᴇᴍʙᴀʟɪ ⦫",
+                    "⦪ 𝑲𝒆𝒎𝒃𝒂𝒍𝒊 ⦫",
                     callback_data=f"p_ub {int(count)}"
                 ),
                 InlineKeyboardButton(
-                    "⦪ sᴇᴛᴜᴊᴜɪ ⦫", callback_data=f"deak_akun {int(count)}",
+                    "⦪ 𝑺𝒆𝒕𝒖𝒋𝒖𝒊 ⦫", callback_data=f"deak_akun {int(count)}",
                 ),
             ],
         ]
@@ -224,8 +224,8 @@ class BTN:
                     callback_data=f"tambah {query}",
                 ),
             ],
-            [InlineKeyboardButton("⦪ ᴋᴏɴꜰɪʀᴍᴀsɪ ⦫", callback_data="confirm")],
-            [InlineKeyboardButton("⦪ ʙᴀᴛᴀʟᴋᴀɴ ⦫", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("⦪ 𝑲𝒐𝒏𝒇𝒊𝒓𝒎𝒂𝒔𝒊 ⦫", callback_data="confirm")],
+            [InlineKeyboardButton("⦪ 𝑩𝒂𝒕𝒂𝒍𝒌𝒂𝒏 ⦫", callback_data=f"home {user_id}")],
         ]
         return button
 
@@ -234,7 +234,7 @@ class BTN:
         button = [
             [
                 InlineKeyboardButton(
-                    "⦪ ʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀsᴇ ⦫",
+                    "⦪ 𝑯𝒂𝒑𝒖𝒔 𝒅𝒂𝒓𝒊 𝒅𝒂𝒕𝒂𝒃𝒂𝒔𝒆 ⦫",
                     callback_data=f"del_ubot {int(user_id)}",
                 )
             ],
@@ -255,11 +255,11 @@ class BTN:
         button = [
             [
                 InlineKeyboardButton(
-                    "⦪ ᴋᴇᴍʙᴀʟɪ ⦫",
+                    "⦪ 𝑲𝒆𝒎𝒃𝒂𝒍𝒊 ⦫",
                     callback_data=f"p_ub {int(count)}"
                 ),
                 InlineKeyboardButton(
-                    "⦪ sᴇᴛᴜᴊᴜɪ ⦫", callback_data=f"deak_akun {int(count)}",
+                    "⦪ 𝑺𝒆𝒕𝒖𝒋𝒖𝒊 ⦫", callback_data=f"deak_akun {int(count)}",
                 ),
             ],
         ]
